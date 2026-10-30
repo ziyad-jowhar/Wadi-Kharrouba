@@ -9,3 +9,22 @@
 @import url("../components/05-indicators/indicators.css");
 @import url("../components/06-population-clock/population-clock.css");
 @import url("../components/07-services/services.css");
+@import url("../components/08-footer/footer.css");
+
+
+.sticky-header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+html,
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
