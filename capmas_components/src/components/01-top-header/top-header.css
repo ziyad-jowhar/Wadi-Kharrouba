@@ -1,0 +1,211 @@
+/* src/components/01-top-header/top-header.css */
+
+.top-header {
+  --top-header-bg: #ffffff;
+  --top-header-gold: #c89637;
+  --top-header-blue: #0986ed;
+  --top-header-border: #eef1f5;
+  --top-header-container: 1320px;
+
+  width: 100%;
+  background-color: var(--top-header-bg);
+  border-bottom: 1px solid var(--top-header-border);
+  direction: rtl;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+}
+
+.top-header__container {
+  width: 100%;
+  max-width: var(--top-header-container);
+  margin-inline: auto;
+  padding-inline: 24px;
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ---------- الشعار ---------- */
+.top-header__logo-link {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.top-header__logo {
+  display: block;
+  width: clamp(200px, 20vw, 260px);
+  height: auto;
+}
+
+/* ---------- منطقة الأدوات (أقصى اليسار) ----------
+   نفرض LTR على الحاوية حتى لا يتأثر ترتيب الأبناء باتجاه الصفحة RTL.
+   الترتيب في DOM: [أزرار الخط] → [زر اللغة] → [تسجيل الدخول]
+   فيظهر بصرياً من اليسار إلى اليمين: خط، لغة، دخول
+   أي من اليمين إلى اليسار: دخول، لغة، خط. */
+.top-header__tools {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- أزرار حجم الخط (صور شفافة بدون أي إطار) ----------
+   direction: ltr على المجموعة نفسها حتى يكون ترتيب DOM = ترتيب بصري من اليسار لليمين.
+   DOM: [تصغير] [افتراضي] [تكبير]  ←  بصرياً LTR: تصغير | افتراضي | تكبير
+   وبالتالي بصرياً RTL (من اليمين لليسار): تكبير | افتراضي | تصغير. */
+.top-header__font-controls {
+  direction: ltr;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-header__font-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  line-height: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: opacity 0.2s ease;
+}
+
+.top-header__font-btn:hover,
+.top-header__font-btn:focus-visible {
+  opacity: 0.75;
+}
+
+.top-header__font-btn:focus-visible {
+  outline: 2px solid var(--top-header-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.top-header__font-img {
+  display: block;
+  width: auto;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ---------- زر اللغة ---------- */
+.top-header__lang-btn {
+  direction: rtl;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding-inline: 18px;
+  background-color: var(--top-header-gold);
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.top-header__lang-text {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.top-header__lang-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+.top-header__lang-btn:hover,
+.top-header__lang-btn:focus-visible {
+  background-color: #b3832b;
+  outline: none;
+}
+
+/* ---------- زر تسجيل الدخول ---------- */
+.top-header__login-btn {
+  direction: rtl;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding-inline: 20px;
+  background-color: var(--top-header-blue);
+  border-radius: 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.top-header__login-text {
+  color: #ffffff;
+}
+
+.top-header__login-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+.top-header__login-btn:hover,
+.top-header__login-btn:focus-visible {
+  background-color: #0a74cd;
+  outline: none;
+}
+
+/* ---------- التجاوب ---------- */
+@media (max-width: 992px) {
+  .top-header__container {
+    min-height: auto;
+    padding-block: 16px;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .top-header__tools {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-header__container {
+    padding-inline: 16px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .top-header__logo {
+    width: 190px;
+  }
+
+  .top-header__tools {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .top-header__login-btn,
+  .top-header__lang-btn {
+    padding-inline: 14px;
+  }
+}

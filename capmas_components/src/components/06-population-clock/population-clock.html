@@ -1,0 +1,100 @@
+<section class="population-clock" aria-label="الساعة السكانية">
+  <img
+    class="population-clock__bg-pattern"
+    src="assets/icons/background-point-colored.svg"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <div class="population-clock__container">
+    <h2 class="population-clock__title">الساعة السكانية</h2>
+
+    <div class="population-clock__grid">
+
+      <div class="population-clock__col population-clock__col--right">
+        <div class="population-clock__total-row">
+          <span class="population-clock__total-label">إجمالي الجمهورية</span>
+          <span class="population-clock__total-number" id="pc-total-number">109,714,606</span>
+        </div>
+
+        <div class="population-clock__map-wrap">
+          <div class="map-container" aria-label="خريطة مصر التفاعلية"></div>
+        </div>
+      </div>
+
+      <div class="population-clock__col population-clock__col--left">
+
+        <div class="population-clock__datetime">
+          <p class="population-clock__date" id="pc-date">الخميس, 29 أكتوبر 2026</p>
+          <p class="population-clock__time" id="pc-time">الساعة 12:50:10 ص حسب توقيت القاهرة</p>
+        </div>
+
+        <div class="population-clock__governorate">
+          <label class="population-clock__gov-label" for="pc-gov-select">المحافظة</label>
+          <div class="population-clock__gov-field">
+            <span class="population-clock__gov-value" id="pc-gov-display">مطروح</span>
+            <img
+              class="population-clock__gov-arrow"
+              src="assets/icons/dropdown-icon.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <select
+              class="population-clock__gov-select"
+              id="pc-gov-select"
+              aria-label="اختيار المحافظة"
+            >
+              <option value="matrouh" selected>مطروح</option>
+              <option value="cairo">القاهرة</option>
+              <option value="alexandria">الإسكندرية</option>
+            </select>
+          </div>
+        </div>
+
+        <ul class="population-clock__stats">
+
+          <li class="population-clock__stat-row">
+            <div class="population-clock__stat-right">
+              <span class="population-clock__stat-icon">
+                <img src="assets/icons/Location.svg" alt="" />
+              </span>
+              <span class="population-clock__stat-name">المساحة</span>
+            </div>
+            <div class="population-clock__stat-left">
+              <span class="population-clock__stat-value" id="pc-area-value">160252.00</span>
+              <span class="population-clock__stat-unit">( كم2 )</span>
+            </div>
+          </li>
+
+          <li class="population-clock__stat-row">
+            <div class="population-clock__stat-right">
+              <span class="population-clock__stat-icon">
+                <img src="assets/icons/Population-family.svg" alt="" />
+              </span>
+              <span class="population-clock__stat-name">عدد السكان الآن</span>
+            </div>
+            <div class="population-clock__stat-left">
+              <span class="population-clock__stat-value" id="pc-population-value">608,860</span>
+              <span class="population-clock__stat-unit">( نسمة )</span>
+            </div>
+          </li>
+
+          <li class="population-clock__stat-row">
+            <div class="population-clock__stat-right">
+              <span class="population-clock__stat-icon">
+                <img src="assets/icons/Population-Density.svg" alt="" />
+              </span>
+              <span class="population-clock__stat-name">الكثافة السكانية</span>
+            </div>
+            <div class="population-clock__stat-left">
+              <span class="population-clock__stat-value" id="pc-density-value">3.80</span>
+              <span class="population-clock__stat-unit">( نسمة لكل كم2 )</span>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>

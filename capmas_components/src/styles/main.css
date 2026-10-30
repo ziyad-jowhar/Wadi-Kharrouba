@@ -1,0 +1,11 @@
+@import url("./tokens.css");
+@import url("./reset.css");
+@import url("./layout.css");
+
+@import url("../components/01-top-header/top-header.css");
+@import url("../components/02-main-nav/main-nav.css");
+@import url("../components/03-news-ticker/news-ticker.css");
+@import url("../components/04-hero-banner/hero-banner.css");
+@import url("../components/05-indicators/indicators.css");
+@import url("../components/06-population-clock/population-clock.css");
+@import url("../components/07-services/services.css");

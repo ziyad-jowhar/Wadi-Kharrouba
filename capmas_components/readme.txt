@@ -1,46 +1,51 @@
-capmas/
-│
-├── index.html                  ← هيكل فقط + روابط
-│
+capmas-portal/
+├── index.html
 ├── assets/
-│   ├── images/                 ← كل صور base64 مستخرجة
-│   │   ├── logo.png
-│   │   ├── hero.jpg
-│   │   └── ...
-│   └── fonts/
+│   ├── fonts/
+│   ├── icons/
+│   └── images/
 │
-├── css/
-│   ├── main.css                ← @import فقط
-│   ├── base/
-│   │   ├── variables.css       ← من :root
+├── src/
+│   ├── styles/
+│   │   ├── tokens.css
 │   │   ├── reset.css
-│   │   └── typography.css
-│   ├── layout/
-│   │   ├── header.css
-│   │   ├── nav.css
-│   │   └── footer.css
-│   └── components/
-│       ├── buttons.css
-│       ├── news-ticker.css
-│       ├── hero.css
-│       ├── slider.css
-│       ├── stat-card.css
-│       └── dashboard.css
-│
-├── js/
-│   ├── main.js
-│   └── modules/
-│       ├── nav.js
-│       ├── slider.js
-│       ├── ticker.js
-│       └── counters.js
-│
-└── components/
-    ├── header.html
-    ├── main-nav.html
-    ├── news-ticker.html
-    ├── hero-banner.html
-    ├── indicators-slider.html
-    ├── stat-card.html          ← مكوّن ذري
-    ├── population-dashboard.html
-    └── footer.html
+│   │   ├── layout.css
+│   │   └── main.css
+│   │
+│   ├── components/
+│   │   ├── 01-top-header/
+│   │   │   ├── top-header.html
+│   │   │   └── top-header.css
+│   │   │
+│   │   ├── 02-main-nav/
+│   │   │   ├── main-nav.html
+│   │   │   └── main-nav.css
+│   │   │
+│   │   ├── 03-news-ticker/
+│   │   │   ├── news-ticker.html
+│   │   │   └── news-ticker.css
+│   │   │
+│   │   ├── 04-hero-banner/
+│   │   │   ├── hero-banner.html
+│   │   │   └── hero-banner.css
+│   │   │
+│   │   ├── 05-indicators/
+│   │   │   ├── indicators.html
+│   │   │   └── indicators.css
+│   │   │
+│   │   ├── 06-population-clock/
+│   │   │   ├── population-clock.html
+│   │   │   ├── population-clock.css
+│   │   │   └── population-clock.js
+│   │   │
+│   │   ├── 07-services-grid/
+│   │   │   ├── services-grid.html
+│   │   │   └── services-grid.css
+│   │   │
+│   │   └── 08-footer/
+│   │       ├── footer.html
+│   │       └── footer.css
+│   │
+│   └── scripts/
+│       ├── main.js
+│       └── modules/

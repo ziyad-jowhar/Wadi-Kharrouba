@@ -1,0 +1,20 @@
+:root {
+    --color-primary: #0077c8;
+    --color-primary-dark: #004b87;
+    --color-navy: #0c2340;
+    --color-accent-gold: #c59b27;
+    --color-text-main: #222222;
+    --color-text-muted: #6c757d;
+    --color-white: #ffffff;
+    --color-bg-light: #f8f9fa;
+    --color-border: #e9ecef;
+
+    --font-family-base: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    --max-width-container: 1320px;
+    --transition-fast: 0.2s ease-in-out;
+}

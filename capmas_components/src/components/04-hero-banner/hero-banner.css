@@ -1,0 +1,181 @@
+/* src/components/04-hero-banner/hero-banner.css */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 510px;
+  height: 510px;
+  overflow: hidden;
+  direction: rtl;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+
+  /* لون خلفية احتياطي داكن يظهر حتى قبل/بدون تحميل الصورة */
+  background-color: #0c2340;
+
+  /* صورة الخلفية + التدرج اللوني وفق فيجما */
+  background-image:
+    linear-gradient(270deg,
+      rgba(9, 134, 237, 0.80) 0%,
+      rgba(9, 134, 237, 0.60) 20%,
+      rgba(9, 134, 237, 0.30) 45%,
+      rgba(9, 134, 237, 0.00) 100%),
+    url("../../../assets/image/hero01.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+}
+
+/* ---------- حاوية الشرائح ---------- */
+.hero-banner__slides {
+  position: absolute;
+  inset: 0;
+}
+
+/* ---------- الشريحة (مخفية افتراضياً) ---------- */
+.hero-banner__slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+/* الشريحة المفعلة — display: flex !important لضمان الظهور الفوري
+   حتى لو لم يعمل الجافاسكريبت نهائياً (Graceful Degradation) */
+.hero-banner__slide.active {
+  display: flex !important;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+/* ---------- الحاوية الداخلية ---------- */
+.hero-banner__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-banner__content {
+  max-width: 680px;
+  padding-inline-start: 68px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.hero-banner__title {
+  margin: 0 0 16px;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.hero-banner__desc {
+  margin: 0;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* ---------- أزرار التحكم ---------- */
+.hero-banner__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  cursor: pointer;
+  z-index: 3;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner__nav:hover,
+.hero-banner__nav:focus-visible {
+  background-color: rgba(255, 255, 255, 0.32);
+  outline: none;
+}
+
+.hero-banner__nav img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* في RTL: "السابق" على اليمين، "التالي" على اليسار */
+.hero-banner__nav--prev {
+  right: 24px;
+}
+
+.hero-banner__nav--next {
+  left: 24px;
+}
+
+/* ---------- التجاوب ---------- */
+@media (max-width: 992px) {
+  .hero-banner {
+    height: 440px;
+    min-height: 440px;
+  }
+
+  .hero-banner__title {
+    font-size: 32px;
+  }
+
+  .hero-banner__content {
+    padding-inline-start: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 380px;
+    min-height: 380px;
+  }
+
+  .hero-banner__title {
+    font-size: 26px;
+  }
+
+  .hero-banner__desc {
+    font-size: 14px;
+  }
+
+  .hero-banner__container {
+    padding-inline: 16px;
+  }
+
+  .hero-banner__content {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+
+  .hero-banner__nav {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-banner__nav--prev {
+    right: 12px;
+  }
+
+  .hero-banner__nav--next {
+    left: 12px;
+  }
+}

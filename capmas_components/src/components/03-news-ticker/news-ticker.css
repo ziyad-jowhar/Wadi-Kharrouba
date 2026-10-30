@@ -1,0 +1,88 @@
+/* src/components/03-news-ticker/news-ticker.css */
+
+.news-ticker {
+  width: 100%;
+  height: 55px;
+  background-color: #c89637;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  direction: rtl;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ---------- منطقة العرض ---------- */
+.news-ticker__viewport {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  /* LTR هنا ضروري للتحكم باتجاه الحركة بغض النظر عن RTL الصفحة */
+  direction: ltr;
+}
+
+.news-ticker__track {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  animation: newsTickerMarquee 20s linear infinite;
+}
+
+/* إيقاف مؤقت عند تمرير الفأرة أو التركيز */
+.news-ticker__viewport:hover .news-ticker__track,
+.news-ticker__viewport:focus-within .news-ticker__track {
+  animation-play-state: paused;
+}
+
+/* ---------- الخبر ---------- */
+.news-ticker__item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  direction: rtl;
+  color: #ffffff;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  padding-inline: 8px;
+}
+
+/* ---------- الفاصل (أيقونة متحركة بين الأخبار) ---------- */
+.news-ticker__separator {
+  display: block;
+  width: 32px;
+  height: 22px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-inline: 16px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* ---------- الحركة ---------- */
+@keyframes newsTickerMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---------- التجاوب ---------- */
+@media (max-width: 576px) {
+  .news-ticker {
+    height: 48px;
+  }
+
+  .news-ticker__item {
+    font-size: 13px;
+    padding-inline: 6px;
+  }
+
+  .news-ticker__separator {
+    width: 24px;
+    height: 18px;
+    margin-inline: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+<!-- src/components/04-hero-banner/hero-banner.html -->
+<section class="hero-banner" role="region" aria-roledescription="carousel" aria-label="البانر الرئيسي">
+  <div class="hero-banner__slides">
+
+    <!-- الشريحة الأولى (مفعّلة افتراضياً بدون الحاجة لأي JS) -->
+    <article class="hero-banner__slide active" role="group" aria-roledescription="slide" aria-label="1 من 1">
+      <div class="hero-banner__container">
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__title">
+            إعلان أسماء الفائزين فى مسابقة مصر فى أرقام
+          </h1>
+          <p class="hero-banner__desc">
+            يتشرف الجهاز المركزى للتعبئة العامة والإحصاء والإذاعة المصرية بإعلان أسماء الفائزين فى " مسابقة مصر فى أرقام
+            "
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- أدوات التحكم بالسلايدر -->
+  <button class="hero-banner__nav hero-banner__nav--prev" type="button" aria-label="الشريحة السابقة">
+    <img src="assets/icons/prev-icon.svg" alt="" width="18" height="18" />
+  </button>
+
+  <button class="hero-banner__nav hero-banner__nav--next" type="button" aria-label="الشريحة التالية">
+    <img src="assets/icons/next-icon.svg" alt="" width="18" height="18" />
+  </button>
+</section>

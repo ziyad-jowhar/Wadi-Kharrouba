@@ -1,0 +1,332 @@
+.population-clock {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  background-color: #1F254B;
+  overflow: hidden;
+  direction: rtl;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  padding-block: 40px 60px;
+  box-sizing: border-box;
+}
+
+.population-clock__bg-pattern {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: 450px;
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  object-fit: cover;
+}
+
+.population-clock__container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
+}
+
+.population-clock__title {
+  margin: 0 0 32px;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #FFFFFF;
+  text-align: right;
+}
+
+.population-clock__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.population-clock__col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.population-clock__col--right {
+  align-items: center;
+}
+
+.population-clock__total-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.population-clock__total-label {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+
+.population-clock__total-number {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.population-clock__map-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 8px;
+}
+
+.population-clock__map {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+.population-clock__col--left {
+  padding-inline-start: 8px;
+}
+
+.population-clock__datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.population-clock__date {
+  margin: 0;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.population-clock__time {
+  margin: 0;
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.population-clock__governorate {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.population-clock__gov-label {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+
+.population-clock__gov-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+  padding-inline: 18px;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.population-clock__gov-value {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.population-clock__gov-arrow {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.population-clock__gov-select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.population-clock__stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.population-clock__stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 70px;
+  padding-block: 8px;
+  border-bottom: 1px solid rgba(161, 169, 197, 0.4);
+}
+
+.population-clock__stat-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.population-clock__stat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.population-clock__stat-icon img {
+  display: block;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.population-clock__stat-name {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.4;
+}
+
+.population-clock__stat-left {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.population-clock__stat-value {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.population-clock__stat-unit {
+  font-family: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+  .population-clock {
+    min-height: auto;
+    padding-block: 32px 48px;
+  }
+
+  .population-clock__bg-pattern {
+    max-width: 320px;
+  }
+
+  .population-clock__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .population-clock__col--right {
+    align-items: flex-start;
+  }
+
+  .population-clock__map-wrap {
+    justify-content: center;
+  }
+
+  .population-clock__total-number {
+    font-size: 32px;
+  }
+
+  .population-clock__stat-name {
+    font-size: 18px;
+  }
+
+  .population-clock__stat-value {
+    font-size: 20px;
+  }
+
+  .population-clock__stat-icon,
+  .population-clock__stat-icon img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 576px) {
+  .population-clock__container {
+    padding-inline: 16px;
+  }
+
+  .population-clock__title {
+    margin-block-end: 20px;
+  }
+
+  .population-clock__total-number {
+    font-size: 26px;
+  }
+
+  .population-clock__stat-row {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .population-clock__stat-left {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
