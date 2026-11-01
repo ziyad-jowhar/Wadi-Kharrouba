@@ -11,6 +11,22 @@
 @import url("../components/07-services/services.css");
 @import url("../components/08-footer/footer.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+#indicators,
+#population-clock,
+#services,
+#downloads {
+  scroll-margin-top: 140px;
+}
 
 .sticky-header-container {
   position: sticky;
@@ -21,10 +37,4 @@
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-}
-
-html,
-body {
-  overflow-x: clip;
-  overflow-y: visible;
 }

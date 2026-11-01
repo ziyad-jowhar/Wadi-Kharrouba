@@ -1,5 +1,3 @@
-/* src/components/01-top-header/top-header.css */
-
 .top-header {
   --top-header-bg: #ffffff;
   --top-header-gold: #c89637;
@@ -26,23 +24,20 @@
   gap: 24px;
 }
 
-/* ---------- الشعار ---------- */
 .top-header__logo-link {
   display: inline-flex;
   flex-shrink: 0;
+  align-items: center;
 }
 
 .top-header__logo {
   display: block;
-  width: clamp(200px, 20vw, 260px);
+  max-height: 65px;
+  width: auto;
   height: auto;
+  object-fit: contain;
 }
 
-/* ---------- منطقة الأدوات (أقصى اليسار) ----------
-   نفرض LTR على الحاوية حتى لا يتأثر ترتيب الأبناء باتجاه الصفحة RTL.
-   الترتيب في DOM: [أزرار الخط] → [زر اللغة] → [تسجيل الدخول]
-   فيظهر بصرياً من اليسار إلى اليمين: خط، لغة، دخول
-   أي من اليمين إلى اليسار: دخول، لغة، خط. */
 .top-header__tools {
   direction: ltr;
   display: flex;
@@ -51,20 +46,17 @@
   flex-wrap: wrap;
 }
 
-/* ---------- أزرار حجم الخط (صور شفافة بدون أي إطار) ----------
-   direction: ltr على المجموعة نفسها حتى يكون ترتيب DOM = ترتيب بصري من اليسار لليمين.
-   DOM: [تصغير] [افتراضي] [تكبير]  ←  بصرياً LTR: تصغير | افتراضي | تكبير
-   وبالتالي بصرياً RTL (من اليمين لليسار): تكبير | افتراضي | تصغير. */
 .top-header__font-controls {
   direction: ltr;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  min-height: 24px;
 }
 
 .top-header__font-btn {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   padding: 0;
   margin: 0;
@@ -76,28 +68,43 @@
   line-height: 0;
   -webkit-appearance: none;
   appearance: none;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.top-header__font-btn:hover,
-.top-header__font-btn:focus-visible {
-  opacity: 0.75;
+.top-header__font-btn:hover {
+  opacity: 0.8;
+}
+
+.top-header__font-btn:active {
+  transform: scale(0.95);
 }
 
 .top-header__font-btn:focus-visible {
   outline: 2px solid var(--top-header-blue);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 4px;
 }
 
 .top-header__font-img {
   display: block;
   width: auto;
-  height: 22px;
   object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* ---------- زر اللغة ---------- */
+.top-header__font-btn--decrement .top-header__font-img {
+  height: 16px;
+}
+
+.top-header__font-btn--default .top-header__font-img {
+  height: 19px;
+}
+
+.top-header__font-btn--increment .top-header__font-img {
+  height: 22px;
+}
+
 .top-header__lang-btn {
   direction: rtl;
   display: inline-flex;
@@ -136,7 +143,6 @@
   outline: none;
 }
 
-/* ---------- زر تسجيل الدخول ---------- */
 .top-header__login-btn {
   direction: rtl;
   display: inline-flex;
@@ -174,7 +180,6 @@
   outline: none;
 }
 
-/* ---------- التجاوب ---------- */
 @media (max-width: 992px) {
   .top-header__container {
     min-height: auto;
@@ -196,7 +201,7 @@
   }
 
   .top-header__logo {
-    width: 190px;
+    max-height: 55px;
   }
 
   .top-header__tools {

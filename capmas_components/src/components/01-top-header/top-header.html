@@ -1,74 +1,37 @@
-<!-- src/components/01-top-header/top-header.html -->
 <header class="top-header">
   <div class="top-header__container">
 
-    <!-- الشعار (أقصى اليمين) -->
     <a class="top-header__logo-link" href="/" aria-label="الصفحة الرئيسية">
-      <img
-        class="top-header__logo"
-        src="assets/image/logo.png"
-        alt="شعار الجهاز"
-        width="260"
-        height="72"
-      />
+      <img class="top-header__logo" src="assets/icons/logo.svg" alt="شعار الجهاز" width="260" height="72" />
     </a>
 
-    <!-- منطقة الأدوات (أقصى اليسار) -->
     <div class="top-header__tools">
 
-      <!-- 1) أزرار حجم الخط (أقصى اليسار) — الترتيب البصري من اليمين لليسار: تكبير، افتراضي، تصغير -->
       <div class="top-header__font-controls" role="group" aria-label="التحكم بحجم الخط">
-        <button class="top-header__font-btn" type="button" aria-label="تصغير حجم الخط">
-          <img
-            class="top-header__font-img"
-            src="assets/image/font-size-decrement-img.png"
-            alt=""
-          />
+        <button class="top-header__font-btn top-header__font-btn--decrement" type="button" data-font-action="decrease"
+          aria-label="تصغير حجم الخط">
+          <img class="top-header__font-img" src="assets/image/font-size-decrement-img.png" alt="" />
         </button>
 
-        <button class="top-header__font-btn" type="button" aria-label="حجم الخط الافتراضي">
-          <img
-            class="top-header__font-img"
-            src="assets/image/font-size-default-img.png"
-            alt=""
-          />
+        <button class="top-header__font-btn top-header__font-btn--default" type="button" data-font-action="reset"
+          aria-label="حجم الخط الافتراضي">
+          <img class="top-header__font-img" src="assets/image/font-size-default-img.png" alt="" />
         </button>
 
-        <button class="top-header__font-btn" type="button" aria-label="تكبير حجم الخط">
-          <img
-            class="top-header__font-img"
-            src="assets/image/font-size-increment-img.png"
-            alt=""
-          />
+        <button class="top-header__font-btn top-header__font-btn--increment" type="button" data-font-action="increase"
+          aria-label="تكبير حجم الخط">
+          <img class="top-header__font-img" src="assets/image/font-size-increment-img.png" alt="" />
         </button>
       </div>
 
-      <!-- 2) زر اللغة -->
-      <button
-        class="top-header__lang-btn"
-        type="button"
-        aria-label="تغيير اللغة إلى الإنجليزية"
-      >
+      <button class="top-header__lang-btn" type="button" aria-label="تغيير اللغة إلى الإنجليزية">
         <span class="top-header__lang-text">EN</span>
-        <img
-          class="top-header__lang-icon"
-          src="assets/icons/lang.svg"
-          alt=""
-          width="18"
-          height="18"
-        />
+        <img class="top-header__lang-icon" src="assets/icons/lang.svg" alt="" width="18" height="18" />
       </button>
 
-      <!-- 3) زر تسجيل الدخول (الأقرب للشعار داخل الأدوات) -->
       <a class="top-header__login-btn" href="/login">
         <span class="top-header__login-text">تسجيل دخول</span>
-        <img
-          class="top-header__login-icon"
-          src="assets/icons/login.svg"
-          alt=""
-          width="18"
-          height="18"
-        />
+        <img class="top-header__login-icon" src="assets/icons/login.svg" alt="" width="18" height="18" />
       </a>
 
     </div>

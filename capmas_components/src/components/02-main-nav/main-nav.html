@@ -1,24 +1,32 @@
-<!-- src/components/02-main-nav/main-nav.html -->
 <nav class="main-nav" aria-label="التنقل الرئيسي">
-    <div class="main-nav__container">
+  <div class="main-nav__container">
 
-        <!-- قائمة الروابط -->
-        <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="#">الجديد</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">البيانات</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">الإصدارات</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">خدمات وأدوات</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">المركز الإعلامي</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">عن الجهاز</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">تواصل معنا</a></li>
-        </ul>
+    <ul class="main-nav__list">
+      <li class="main-nav__item"><a class="main-nav__link" href="#">الرئيسية</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#population-clock">معلومات عن مطروح</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#services">التحليلات و الخرائط</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="about_place.html">معلومات عن الوادي و الموقع</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#indicators">فريق العمل و الاشراف</a></li>
+      <li class="main-nav__item"><a class="main-nav__link" href="#downloads">تحميل بيانات المشروع</a></li>
+    </ul>
 
-        <!-- شريط البحث -->
-        <form class="main-nav__search" role="search" action="/search" method="get">
-            <img class="main-nav__search-icon" src="assets/icons/search_lens.svg" alt="" width="16" height="16" />
-            <input class="main-nav__search-input" type="search" name="q" placeholder="ابحث..."
-                aria-label="بحث في الموقع" autocomplete="off" />
-        </form>
+    <form class="main-nav__search" role="search" action="/search" method="get">
+      <img
+        class="main-nav__search-icon"
+        src="assets/icons/search_lens.svg"
+        alt=""
+        width="16"
+        height="16"
+      />
+      <input
+        class="main-nav__search-input"
+        type="search"
+        name="q"
+        placeholder="ابحث..."
+        aria-label="بحث في الموقع"
+        autocomplete="off"
+      />
+    </form>
 
-    </div>
+  </div>
 </nav>
