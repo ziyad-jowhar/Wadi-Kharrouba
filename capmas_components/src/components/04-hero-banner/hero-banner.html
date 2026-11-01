@@ -1,17 +1,75 @@
-<!-- src/components/04-hero-banner/hero-banner.html -->
-<section class="hero-banner" role="region" aria-roledescription="carousel" aria-label="البانر الرئيسي">
+<section
+  class="hero-banner"
+  role="region"
+  aria-roledescription="carousel"
+  aria-label="البانر الرئيسي"
+>
   <div class="hero-banner__slides">
 
-    <!-- الشريحة الأولى (مفعّلة افتراضياً بدون الحاجة لأي JS) -->
-    <article class="hero-banner__slide active" role="group" aria-roledescription="slide" aria-label="1 من 1">
+    <article
+      class="hero-banner__slide active"
+      role="group"
+      aria-roledescription="slide"
+      aria-label="1 من 3"
+    >
+      <div
+        class="hero-banner__bg"
+        style="background-image: url('assets/image/team-hero-01.png');"
+        aria-hidden="true"
+      ></div>
+      <div class="hero-banner__overlay" aria-hidden="true"></div>
+
       <div class="hero-banner__container">
         <div class="hero-banner__content">
-          <h1 class="hero-banner__title">
-            إعلان أسماء الفائزين فى مسابقة مصر فى أرقام
-          </h1>
+          <h1 class="hero-banner__title">المجموعة الاولي | مشروع التخرج</h1>
           <p class="hero-banner__desc">
-            يتشرف الجهاز المركزى للتعبئة العامة والإحصاء والإذاعة المصرية بإعلان أسماء الفائزين فى " مسابقة مصر فى أرقام
-            "
+            تتشرف المجموعة الاولي من طلاب برنامج الجيوماتكس بكلية الاداب جامعة الاسكندرية بتقديم مشروع التخرج المساحي الخاص بها تحت عنوان مشروع الرفع المساحي لوادي خروبة
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article
+      class="hero-banner__slide"
+      role="group"
+      aria-roledescription="slide"
+      aria-label="2 من 3"
+    >
+      <div
+        class="hero-banner__bg"
+        style="background-image: url('assets/image/team-hero-02.png');"
+        aria-hidden="true"
+      ></div>
+      <div class="hero-banner__overlay" aria-hidden="true"></div>
+
+      <div class="hero-banner__container">
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__title">المجموعة الاولي | مشروع التخرج</h1>
+          <p class="hero-banner__desc">
+            تتشرف المجموعة الاولي من طلاب برنامج الجيوماتكس بكلية الاداب جامعة الاسكندرية بتقديم مشروع التخرج المساحي الخاص بها تحت عنوان مشروع الرفع المساحي لوادي خروبة
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article
+      class="hero-banner__slide"
+      role="group"
+      aria-roledescription="slide"
+      aria-label="3 من 3"
+    >
+      <div
+        class="hero-banner__bg"
+        style="background-image: url('assets/image/team-hero-03.jpeg');"
+        aria-hidden="true"
+      ></div>
+      <div class="hero-banner__overlay" aria-hidden="true"></div>
+
+      <div class="hero-banner__container">
+        <div class="hero-banner__content">
+          <h1 class="hero-banner__title">المجموعة الاولي | مشروع التخرج</h1>
+          <p class="hero-banner__desc">
+            تتشرف المجموعة الاولي من طلاب برنامج الجيوماتكس بكلية الاداب جامعة الاسكندرية بتقديم مشروع التخرج المساحي الخاص بها تحت عنوان مشروع الرفع المساحي لوادي خروبة
           </p>
         </div>
       </div>
@@ -19,12 +77,46 @@
 
   </div>
 
-  <!-- أدوات التحكم بالسلايدر -->
-  <button class="hero-banner__nav hero-banner__nav--prev" type="button" aria-label="الشريحة السابقة">
+  <button
+    class="hero-banner__nav hero-banner__nav--prev"
+    type="button"
+    aria-label="الشريحة السابقة"
+  >
     <img src="assets/icons/prev-icon.svg" alt="" width="18" height="18" />
   </button>
 
-  <button class="hero-banner__nav hero-banner__nav--next" type="button" aria-label="الشريحة التالية">
+  <button
+    class="hero-banner__nav hero-banner__nav--next"
+    type="button"
+    aria-label="الشريحة التالية"
+  >
     <img src="assets/icons/next-icon.svg" alt="" width="18" height="18" />
   </button>
+
+  <div class="hero-banner__dots" role="tablist" aria-label="مؤشرات الشرائح">
+    <button
+      class="hero-banner__dot is-active"
+      type="button"
+      role="tab"
+      aria-label="الشريحة 1"
+      aria-selected="true"
+      data-slide-index="0"
+    ></button>
+    <button
+      class="hero-banner__dot"
+      type="button"
+      role="tab"
+      aria-label="الشريحة 2"
+      aria-selected="false"
+      data-slide-index="1"
+    ></button>
+    <button
+      class="hero-banner__dot"
+      type="button"
+      role="tab"
+      aria-label="الشريحة 3"
+      aria-selected="false"
+      data-slide-index="2"
+    ></button>
+  </div>
 </section>

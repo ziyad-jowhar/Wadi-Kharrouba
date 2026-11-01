@@ -42,10 +42,22 @@ capmas-portal/
 │   │   │   ├── services-grid.html
 │   │   │   └── services-grid.css
 │   │   │
-│   │   └── 08-footer/
-│   │       ├── footer.html
-│   │       └── footer.css
+│   │   ├── 08-footer/
+│   │   │   ├── footer.html
+│   │   │   └── footer.css
+│   │   │
+│   │   ├── 09-downloads-page/
+│   │   │   ├── downloads-page.html
+│   │   │   └── downloads-page.css
+│   │   │
+│   │   └── 10-uppage-page/
+│   │       ├── uppage.html
+│   │       └── uppage.css
 │   │
 │   └── scripts/
 │       ├── main.js
 │       └── modules/
+│           ├── hero-banner.js
+│           ├── indicators.js
+│           ├── news-ticker.js
+│           └── population-clock.js
